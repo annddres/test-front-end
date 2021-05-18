@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="keywords", content=categories)
+  body
+   div(class="busqueda")
+    form(action="/items", method="POST")
+     img(src='../images/Logo_ML.png' class="logo")
+     input(type="text", name="txtBusqueda", value="", placeholder="Nunca dejes de buscar" class="caja-busqueda")
+     p(class="boton-buscar")
+      input(type="image", src='../images/ic_Search.png')
+
+   block content

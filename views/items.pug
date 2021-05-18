@@ -1,0 +1,20 @@
+extends search
+
+block content
+   div(class="breadcum")
+    label(class="f-14")=category
+   table(class="resultados")
+      tbody
+       each item in items
+        tr
+         td
+          a(href='items/' + item.id)
+           img(src=item.picture , alt=item.title, class='thumbnail mt-16 mb-16') 
+         td
+          label(class="f-24")="$ " + item.price.amount
+          br
+          label(class="f-18 mt-32")=item.title
+          br
+          label(class="f-18")=item.condition
+         td
+          label(class="f-12")=item.location

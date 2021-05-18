@@ -1,0 +1,23 @@
+extends search
+
+block content
+  div(class="breadcum")
+   label(class="f-14")=category
+  table(class="detalle")
+   tbody
+    tr
+     td
+      img(src=item.picture, alt=item.title, class="photo")
+     td
+      label(class="f-14")=item.condition + " - " + item.sold_quantity + " Vendidos"
+      br
+      label(class="mt-16 f-24")=item.title
+      br
+      label(class="mt-32 mb-32 f-46")="$ " + item.price.amount
+      br
+      input(type="submit", value="Comprar" class="boton-comprar")
+    tr
+     td(colspan=2)
+      label(class="mt-32 f-28")="Descripción del producto"
+      br
+      label(class="mt-32 f-16")=item.description
